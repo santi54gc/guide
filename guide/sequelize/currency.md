@@ -110,9 +110,11 @@ const sequelize = new Sequelize('database', 'username', 'password', {
 	storage: 'database.sqlite',
 });
 
+Here: //
 const CurrencyShop = sequelize.import('models/CurrencyShop');
 sequelize.import('models/Users');
 sequelize.import('models/UserItems');
+//
 
 const force = process.argv.includes('--force') || process.argv.includes('-f');
 
@@ -150,9 +152,11 @@ const sequelize = new Sequelize('database', 'username', 'password', {
 	storage: 'database.sqlite',
 });
 
+Here: //
 const Users = sequelize.import('models/Users');
 const CurrencyShop = sequelize.import('models/CurrencyShop');
 const UserItems = sequelize.import('models/UserItems');
+//
 
 UserItems.belongsTo(CurrencyShop, { foreignKey: 'item_id', as: 'item' });
 
